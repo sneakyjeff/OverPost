@@ -3,6 +3,7 @@ from os import path
 
 ROOT = path.dirname(path.relpath((__file__)))
 
+#python cursor objects allow control structure to traverse and look through database
 def create_post(name, content):
 	con = sql.connect(path.join(ROOT, 'database.db'))
 	cur = con.cursor()
@@ -18,3 +19,4 @@ def get_posts():
 	return posts
 
 # print('This is the path: ' + ROOT)
+
